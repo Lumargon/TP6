@@ -1,4 +1,4 @@
-package org.albfan.javafxTest;
+package org.javafxTest;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -8,6 +8,8 @@ import javafx.scene.control.Button;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.*
+import java.io.*
 
 public class HelloWorldFXMLController implements Initializable {
 
@@ -20,6 +22,13 @@ public class HelloWorldFXMLController implements Initializable {
     @FXML
     void onAction(ActionEvent event) {
         System.out.println("Hello World! (controllerButton)");
+    }
+    public void initialize(URL location, ResourceBundle resources) {
+        button.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
+                System.out.println("Hello World! (button)");
+            }
+        });
     }
 
 }
